@@ -1,11 +1,15 @@
 # multi-arch-helloworld
 multi-arch-helloworld(java,go)
-docker login
-docker buildx ls
-docker buildx create --name mybuilder --driver docker-container --bootstrap
-docker buildx use mybuilder
-docker buildx inspect --bootstrap
 
+docker login -u <user> -p <pwd>
+
+docker buildx ls
+
+docker buildx create --name mybuilder --driver docker-container --bootstrap
+
+docker buildx use mybuilder
+
+docker buildx inspect --bootstrap
 
 yum install qemu-kvm/sudo apt-get install qemu
 
